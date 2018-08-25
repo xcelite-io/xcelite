@@ -1,4 +1,4 @@
-1.2.2 [(Link to github)](https://github.com/xcelite-io/xcelite/releases/tag/v1.1.0)
+1.2.2 [(Link to github)](https://github.com/xcelite-io/xcelite/releases/tag/v1.2.2)
 =====================================
 - Added unit-tests
 - configuration of xcelite behavior now through XceliteOptions
