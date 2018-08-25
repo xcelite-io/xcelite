@@ -16,6 +16,8 @@
 package com.ebay.xcelite.model;
 
 import com.ebay.xcelite.annotations.Column;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -23,47 +25,16 @@ import java.util.Date;
  *
  * @author Thanthathon.b
  */
+@Data
 public class CamelCase implements Serializable {
 
     @Column(name = "Name")
     private String name;
     @Column(name = "Surname")
     private String surname;
-    @Column(dataFormat = DateConverter.DATE_PATTERN, name = "BirthDate", converter = DateConverter.class)
+    @Column(dataFormat = UsStringCellDateConverter.DATE_PATTERN, name = "BirthDate", converter = UsStringCellDateConverter.class)
     private Date birthDate;
     @Column(name = "Sex")
     private String sex;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public Date getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
 
 }

@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.ebay.xcelite.model;
 
-import com.ebay.xcelite.annotations.Column;
+import com.ebay.xcelite.annotations.AnyColumn;
 import lombok.Data;
 
-import java.io.Serializable;
-import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
+ * Using this bean causes an exception, as multiple
+ * {@link com.ebay.xcelite.annotations.AnyColumn} annotations are not allowed
  *
- * @author Thanthathon.b
+ * @author Johannes
  */
 @Data
-public class ThaiCase implements Serializable {
+public class AnyColumnBeanDoneWrong {
 
-    @Column(name = "ชื่อ")
-    private String name;
-    @Column(name = "นามสกุล")
-    private String surname;
-    @Column(name = "วันเกิด", converter = UsStringCellDateConverter.class, dataFormat = UsStringCellDateConverter.DATE_PATTERN)
-    private Date birthDate;
-    @Column(name = "เพศ")
-    private String sex;
+    @AnyColumn
+    private Map<String,List<String>> columns;
 
+    @AnyColumn
+    private Map<String,List<String>> moreColumns;
+    
 }

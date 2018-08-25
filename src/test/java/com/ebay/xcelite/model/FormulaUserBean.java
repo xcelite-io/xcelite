@@ -23,18 +23,21 @@ import java.util.Date;
 
 /**
  *
- * @author Thanthathon.b
+ * @author Johannes
  */
 @Data
-public class ThaiCase implements Serializable {
+public class FormulaUserBean implements Serializable {
 
-    @Column(name = "ชื่อ")
+    @Column(name = "NAME")
     private String name;
-    @Column(name = "นามสกุล")
+
+    @Column(name = "SURNAME")
     private String surname;
-    @Column(name = "วันเกิด", converter = UsStringCellDateConverter.class, dataFormat = UsStringCellDateConverter.DATE_PATTERN)
+
+    @Column(name = "BIRTHDATE", converter = UsStringCellDateConverter.class, dataFormat = UsStringCellDateConverter.DATE_PATTERN)
     private Date birthDate;
-    @Column(name = "เพศ")
+
+    @Column(name = "SEX")
     private String sex;
 
 }
