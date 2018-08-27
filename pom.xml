@@ -10,6 +10,12 @@
 	<description>Xcelite is an ORM like Java library which allows you to easily
 		serialize and deserialize Java beans to/from Excel spreadsheets</description>
 	<url>http://xcelite.io</url>
+	<organization>
+		<name>Xcelite Development</name>
+		<url>http://xcelite.io</url>
+	</organization>
+
+
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
@@ -44,8 +50,11 @@
 
 	<developers>
 		<developer>
-			<name>Johannes Jander</name>
+			<name>Xcelite Developers</name>
 			<email>xcelite.io@gmail.com</email>
+		</developer>
+		<developer>
+			<name>Johannes Jander</name>
 		</developer>
 	</developers>
 
